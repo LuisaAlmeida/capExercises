@@ -1,0 +1,12 @@
+Exercise - Singleton
+Create a singleton ShopList of lazy type. 
+This singleton stores the list of shops (as string).
+
+Implement the following functionalities:
+- adding a shoplist to the list:       
+- a method adding the server to the list should return boolean 
+	( true if the item has been added to the list, false if it’s otherwise );
+- adding is possible, if its name starts from Food or Other;
+- adding a duplicated name is impossible;
+- download a list of ShopList, that names start from Food;
+- download a list of ShopList, that names start from Other;
