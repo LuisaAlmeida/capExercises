@@ -26,32 +26,20 @@ public class ShopList {
 		return instance;
 	}
 
-	public boolean add(String item) {
-		if(shopList.isEmpty()) {
-			if(item.startsWith("Food") || item.startsWith("Other")) {
-				shopList.add(item);
-				return true;
-			}
+	public Boolean verify(String item) {
+		if(!shopList.contains(item) && (item.startsWith("Food") || item.startsWith("Other"))) {
+			return true;
 		}
+		System.out.println("This item cannot be added");
+		return false;
+	}
+
+	public boolean add(String item) {
 		if(verify(item) == true) {
 			shopList.add(item);
 			return true;
-		} else {	
-			return false;
 		}
-	}
-
-	public Boolean verify(String item) {
-		for(String i : shopList) {
-			if(item.startsWith("Food") || item.startsWith("Other")) {
-				System.out.println("Need to check if this item is already on the List");
-				if(item.equals(i)) {
-					System.out.println("This item already exist so it cannot be added");
-					return false;
-				}
-			}
-		}
-		return true;
+		return false;
 	}
 
 	public void downloadFood() {
