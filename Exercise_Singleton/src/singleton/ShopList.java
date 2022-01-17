@@ -43,19 +43,15 @@ public class ShopList {
 	}
 
 	public void downloadFood() {
-		for(String i : shopList) {
-			if(i.startsWith("Food")) {
-				System.out.println(i);
-			}
-		}
+		shopList.stream()
+		.filter(item -> item.startsWith("Food"))
+		.forEach(System.out::println);
 	}
 
 	public void downloadOther() {
-		for(String i : shopList) {
-			if(i.startsWith("Other")) {
-				System.out.println(i);
-			}
-		}
+		shopList.stream()
+		.filter(item -> item.startsWith("Other"))
+		.forEach(System.out::println);
 	}
 
 }
