@@ -1,0 +1,8 @@
+Create a program FindAverage that takes four command line integers. 
+The first three are integers to be add to an Pojo, Average, with a List of integers. 
+The last command line, is the value to do the division of list of integers. Add the value on Pojo as average.
+,
+The propose of the program is to find the average of the List of integers. So:
+- adding a integers to the list;       
+- getAllListOfIntegers;
+- apply the sum of integers with the division of the average;
