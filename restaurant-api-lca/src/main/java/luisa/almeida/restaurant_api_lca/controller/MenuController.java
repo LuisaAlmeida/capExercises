@@ -42,11 +42,12 @@ public class MenuController {
 
 	@PostMapping
 	@RequestMapping("/addMenu")
+	//TODO fazer 1 único return, criar response fora do try, linha 49 fazer sets como quero..idem 52....return abaixo da linha 64
 	public ResponseMenu addMenu(@RequestBody MenuDto dto) {
 		try {
-			if(dto.getDishName().isBlank() || dto.getStartSellingPeriod() == null || dto.getEndSellingPeriod() == null ) {
-				ResponseMenu badResponseMenu = new ResponseMenu("NOK", "400", "Bad request");
-				return badResponseMenu;
+			if(dto.getDishName().isBlank() || dto.getStartSellingPeriod() == null || dto.getEndDate() == null ) {
+			ResponseMenu badResponseMenu = new ResponseMenu("NOK", "400", "Bad request");
+			return badResponseMenu;
 			} 
 			Menu menu = new Menu();
 			menu = converter.convertToModel(dto, menu);
@@ -61,6 +62,7 @@ public class MenuController {
 			badResponse.setMsg("OK");
 			return badResponse;
 		}
+		//TODO RETURN
 	}
 
 	@PostMapping

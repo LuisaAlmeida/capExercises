@@ -1,5 +1,8 @@
 package luisa.almeida.restaurant_api_lca.data_transfer;
 
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+
 public abstract class Response {
 
 	private String status;
@@ -7,6 +10,7 @@ public abstract class Response {
 	private String statusCode;
 	private String transactionID;
 	private String msg;
+	public static final String DATE_FORMAT_NOW = "yyyy-MM-dd: HH:mm:ss";
 
 
 	public String getStatus() {
@@ -40,7 +44,10 @@ public abstract class Response {
 		this.msg = msg;
 	}
 
-	
-
+	public static String now() {
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat sdf = new SimpleDateFormat(DATE_FORMAT_NOW);
+		return sdf.format(calendar.getTime());
+	}
 
 }

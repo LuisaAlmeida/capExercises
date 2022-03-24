@@ -17,7 +17,7 @@ public class MenuService {
 	@Autowired
 	private MenuRepository repository;
 
-
+	
 	public List<Menu> getMenu() {
 		List<Menu> menuList = repository.findAll();
 		for(Menu menu : menuList) {

@@ -37,10 +37,6 @@ public class OrderService {
 		}
 	}
 	
-	@Transactional
-	public Order save(Order order) {
-		return repository.saveAndFlush(order);
-	}
 	
 	public PurchaseStatus getPurchaseStatus(Integer id) {
 		Order order = repository.getById(id);

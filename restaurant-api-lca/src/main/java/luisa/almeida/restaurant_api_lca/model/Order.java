@@ -1,6 +1,7 @@
 package luisa.almeida.restaurant_api_lca.model;
 
-import java.sql.Date;
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -32,7 +33,7 @@ public class Order {
 	private String deliveryAddress;
 	
 	@Column(nullable = false)
-	private Date date;
+	private Date orderDate;
 	
 	@Column(nullable = false)
 	private Integer quantity;
@@ -81,12 +82,12 @@ public class Order {
 		this.deliveryAddress = deliveryAddress;
 	}
 
-	public Date getDate() {
-		return date;
+	public Date getOrderDate() {
+		return orderDate;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setOrderDate(Date date) {
+		this.orderDate = date;
 	}
 
 	public Integer getQuantity() {

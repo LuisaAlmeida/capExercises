@@ -1,6 +1,7 @@
 package luisa.almeida.restaurant_api_lca.dto;
 
-import java.sql.Date;
+import java.time.LocalDate;
+
 import javax.validation.constraints.NotBlank;
 
 public class MenuDto {
@@ -14,13 +15,10 @@ public class MenuDto {
 	private Boolean isAvailable;
 	
 	@NotBlank
-	private Boolean isOnSale;
+	private LocalDate startDate;
 	
 	@NotBlank
-	private Date startSellingPeriod;
-	
-	@NotBlank
-	private Date endSellingPeriod;
+	private LocalDate endDate;
 
 	public Integer getId() {
 		return id;
@@ -46,28 +44,20 @@ public class MenuDto {
 		this.isAvailable = isAvailable;
 	}
 
-	public Boolean getIsOnSale() {
-		return isOnSale;
+	public LocalDate getStartDate() {
+		return startDate;
 	}
 
-	public void setIsOnSale(Boolean isOnSale) {
-		this.isOnSale = isOnSale;
-	}
-
-	public Date getStartSellingPeriod() {
-		return startSellingPeriod;
-	}
-
-	public void setStartSellingPeriod(Date startSellingPeriod) {
-		this.startSellingPeriod = startSellingPeriod;
+	public void setStartDate(LocalDate startSellingPeriod) {
+		this.startDate = startSellingPeriod;
 	}
 	
-	public Date getEndSellingPeriod() {
-		return endSellingPeriod;
+	public LocalDate getEndDate() {
+		return endDate;
 	}
 	
-	public void setEndSellingPeriod(Date endSellingPeriod) {
-		this.endSellingPeriod = endSellingPeriod;
+	public void setEndDate(LocalDate endSellingPeriod) {
+		this.endDate = endSellingPeriod;
 	}
 	
 }

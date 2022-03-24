@@ -1,6 +1,8 @@
 package luisa.almeida.restaurant_api_lca.dto;
 
-import java.sql.Date;
+
+
+import java.util.Date;
 
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -27,7 +29,7 @@ public class OrderDto {
 	private String deliveryAddress;
 	
 	@NotNull
-	private Date date;
+	private Date orderDate;
 	
 	@NotBlank
 	private Integer quantity;
@@ -76,11 +78,11 @@ public class OrderDto {
 	}
 
 	public Date getDate() {
-		return date;
+		return orderDate;
 	}
 
-	public void setDate(Date date) {
-		this.date = date;
+	public void setDate(Date orderDate) {
+		this.orderDate = orderDate;
 	}
 
 	public Integer getQuantity() {

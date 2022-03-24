@@ -1,6 +1,8 @@
 package luisa.almeida.restaurant_api_lca.model;
 
-import java.sql.Date;
+
+
+import java.time.LocalDate;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,23 +17,22 @@ public class Menu {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Integer id;
 	
-	@Column(nullable = false, length = 255)
+	@Column(name = "dish_name", nullable = false, length = 255)
 	private String dishName;
 	
-	@Column
+	@Column(name = "availability")
 	private Boolean isAvailable;
 	
-	@Column
-	private Boolean isOnSale;
+	@Column(name = "start_sell_date", nullable = false)
+	private LocalDate startDate;
 	
-	@Column(nullable = false)
-	private Date startSellingPeriod;
-	
-	@Column(nullable = false)
-	private Date endSellingPeriod;
+	@Column(name = "end_sell_date", nullable = false)
+	private LocalDate endDate;
 
+	
 	public Integer getId() {
 		return id;
 	}
@@ -56,28 +57,20 @@ public class Menu {
 		this.isAvailable = isAvailable;
 	}
 
-	public Boolean getIsOnSale() {
-		return isOnSale;
+	public LocalDate getStartDate() {
+		return startDate;
 	}
 
-	public void setIsOnSale(Boolean isOnSale) {
-		this.isOnSale = isOnSale;
+	public void setStartDate(LocalDate startDate) {
+		this.startDate = startDate;
 	}
 
-	public Date getStartSellingPeriod() {
-		return startSellingPeriod;
+	public LocalDate getEndDate() {
+		return endDate;
 	}
 
-	public void setStartSellingPeriod(Date startSellingPeriod) {
-		this.startSellingPeriod = startSellingPeriod;
-	}
-
-	public Date getEndSellingPeriod() {
-		return endSellingPeriod;
-	}
-
-	public void setEndSellingPeriod(Date endSellingPeriod) {
-		this.endSellingPeriod = endSellingPeriod;
+	public void setEndDate(LocalDate endDate) {
+		this.endDate = endDate;
 	}
 	
 

@@ -15,9 +15,8 @@ public class Converter {
 
 		model.setDishName(dto.getDishName());
 		model.setIsAvailable(dto.getIsAvailable());
-		model.setIsOnSale(dto.getIsOnSale());
-		model.setStartSellingPeriod(dto.getStartSellingPeriod());
-		model.setEndSellingPeriod(dto.getEndSellingPeriod());
+		model.setStartDate(dto.getStartDate());
+		model.setEndDate(dto.getEndDate());
 		return model;
 	}
 
@@ -26,16 +25,15 @@ public class Converter {
 		dto.setId(model.getId());
 		dto.setDishName(model.getDishName());
 		dto.setIsAvailable(model.getIsAvailable());
-		dto.setIsOnSale(model.getIsOnSale());
-		dto.setStartSellingPeriod(model.getStartSellingPeriod());
-		dto.setEndSellingPeriod(model.getEndSellingPeriod());
+		dto.setStartDate(model.getStartDate());
+		dto.setEndDate(model.getEndDate());
 		return dto;
 	}
-	
+	 
 	public Order convertToModel(OrderDto dto) {
 		Order model = new Order();
 		model.setCustomerName(dto.getCustomerName());
-		model.setDate(dto.getDate());
+		model.setOrderDate(dto.getDate());
 		model.setDeliveryAddress(dto.getDeliveryAddress());
 		model.setDishName(dto.getDishName());
 		model.setQuantity(dto.getQuantity());
@@ -47,7 +45,7 @@ public class Converter {
 	public OrderDto convertToDto(Order model) {
 		OrderDto dto = new OrderDto();
 		dto.setCustomerName(model.getCustomerName());
-		dto.setDate(model.getDate());
+		dto.setDate(model.getOrderDate());
 		dto.setDeliveryAddress(model.getDeliveryAddress());
 		dto.setDishName(model.getDishName());
 		dto.setQuantity(model.getQuantity());
