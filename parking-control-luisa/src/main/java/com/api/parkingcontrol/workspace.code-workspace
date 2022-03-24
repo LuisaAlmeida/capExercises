@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\..\\..\\..\\..\\Documents\\Exercícios\\Spring Boot Exerc\\luisa-favorite-movies"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\.."
+		}
+	],
+	"settings": {
+		"java.configuration.updateBuildConfiguration": "interactive"
+	}
+}
